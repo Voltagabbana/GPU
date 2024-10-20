@@ -1,0 +1,36 @@
+20 /10 /2024
+_________________________________________________________
+import problems:
+_________________________________________________________
+
+I've experienced problems with importing matplotlib:
+
+Multiple Python Environments:
+
+1. System Python: Global installation on Windows.
+2. Conda Environment: Isolated virtual environment (e.g., "data_manipulation_libraries").
+
+Best Practices:
+- Use the correct Conda environment for your project.
+- Ensure the right kernel is selected in Jupyter Notebook.
+- Install packages in the Conda environment:
+  a. In notebook: !{sys.executable} -m pip install package_name
+  b. In command prompt:
+     conda activate data_manipulation_libraries
+     pip install package_name
+     or
+     conda install package_name
+
+- Avoid using global pip or conda without activating the correct environment.
+
+To install matplotlib in your Conda environment:
+!conda install -y matplotlib
+or
+!{sys.executable} -m pip install matplotlib
+
+Always restart the kernel after installing new packages.
+
+Maintaining separate environments is a Python best practice, allowing projects with different dependencies to coexist without conflicts.
+
+
+
